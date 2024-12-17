@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login Page</title>
+</head>
+<body>
+    <h1>Welcome</h1>
+    <input type="text" id="username" placeholder="Enter your username" />
+    <input type="password" id="password" placeholder="Enter your password" /><br>
+    <button id="login">Login</button>
+    <p id="out"></p>
+
+    <script>
+        // References to input fields and button
+        let usernameInput = document.getElementById("username");
+        let passwordInput = document.getElementById("password");
+        let loginButton = document.getElementById("login");
+        let output = document.getElementById("out");
+
+        // Event listener for the Login button
+        loginButton.addEventListener("click", function () {
+            // Get values from the input fields
+            let username = usernameInput.value;
+            let password = passwordInput.value;
+
+            // Check credentials
+            if (username === "mady" && password === "mady") {
+                output.textContent = "Good! Login successful.";
+                output.style.color = "green";
+            } else {
+                output.textContent = "Please check your username and password.";
+                output.style.color = "red";
+            }
+        });
+    </script>
+</body>
+</html>
